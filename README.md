@@ -1,6 +1,6 @@
 <h1 align='center'>Simple Food Order App 🍕</h1>
 
-#### **🍺 Demo:**
+#### **🍺 Demo: https://htv-food.herokuapp.com **
 
 #### **🍩 Technologies**
 
@@ -24,7 +24,7 @@
 1. Clone Project
 
 ```
-  git clone 
+  git clone https://github.com/htrvu/food-webapp.git
 ```
 
 2. Install Packages
