@@ -5,7 +5,7 @@
 #### **🍩 Technologies**
 
 - Frontend
-  - SCSS
+  - Node Sass
   - Material UI
   - Axios
   - React-router-dom
