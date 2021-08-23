@@ -97,7 +97,41 @@
 }
 
 // Responsive
+@include md_down {
+  #home-category {
+    .bg-icon__1 {
+      width: 20rem;
+    }
+  
+    .bg-icon__2 {
+      width: 15rem;
+    }
+  
+    .bg-icon__3 {
+      width: 20rem;
+    }
+  }
+}
+
 @include sm_down {
+  #home-category {
+    .bg-icon__1 {
+      top: -60%;
+      left: -24px;
+      width: 16rem;
+    }
+
+    .bg-icon__2 {
+      top: -76%;
+      right: 0;
+      width: 13rem;
+    }
+
+    .bg-icon__3 {
+      display: none;
+    }
+  }
+  
   .home-category__slider {
     .slick-list {
       width: 78% !important;

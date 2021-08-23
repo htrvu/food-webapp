@@ -93,3 +93,35 @@
     }
   }
 }
+
+@include sm_down {
+  #home-review {
+    .bg-icon__4 {
+      top: -15%;
+      width: 12rem;
+      height: 12rem;
+    }
+  
+    .bg-icon__5 {
+      top: 80%;
+      left: 10%;
+      width: 10rem;
+      height: 10rem;
+    }
+    
+    .bg-icon__6 {
+      top: 65%;
+      left: 60%;
+    }
+  
+    .bg-icon__7 {
+      top: -25%;
+      left: 68%;
+    }
+  
+    .bg-icon__8 {
+      top: 30%;
+      right: -10px;
+    }
+  }
+}
