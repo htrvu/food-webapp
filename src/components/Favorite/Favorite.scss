@@ -1,0 +1,44 @@
+.favorite__wrapper {
+  position: fixed;
+  right: 50px;
+  top: 25%;
+  z-index: 1001;
+  width: 40rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  .favorite__heading {
+    background-color: #434655;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+
+    .favorite__close-btn {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+@include sm_down {
+  .favorite__wrapper {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: unset;
+  }
+}
+
+@import './FavoriteList/FavoriteList.scss';

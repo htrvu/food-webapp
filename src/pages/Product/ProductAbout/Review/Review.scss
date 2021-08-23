@@ -1,0 +1,14 @@
+.review__avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+@include sm_down {
+  .review__avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@import './ReviewInput/ReviewInput.scss';
+@import './ReviewList/ReviewList.scss';

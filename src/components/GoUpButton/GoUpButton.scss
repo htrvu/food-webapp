@@ -1,0 +1,29 @@
+.go-up-btn {
+  color: $primary-color;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  position: fixed;
+  bottom: 32px;
+  right: 20px;
+  z-index: 998;
+
+  .go-up-btn__icon {
+    font-size: 3.6rem;
+  }
+  
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+  }
+}
+
+@include sm_down {
+  .go-up-btn {
+    width: 48px;
+    height: 48px;
+
+    .go-up-btn__icon {
+      font-size: 3rem;
+    }
+  }
+}

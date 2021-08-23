@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, useEffect } from "react"
+import { useLocation } from "react-router-dom"
+
+import CssBaseline from "@material-ui/core/CssBaseline"
+
+import Routes from "./routes/Routes"
+import LoadingPage from "./components/LoadingPage/LoadingPage"
+import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/Footer/Footer"
+import GoUpButton from "./components/GoUpButton/GoUpButton"
+import Cart from "./components/Cart/Cart"
+import Favorite from "./components/Favorite/Favorite"
+import Toast from './components/Toast/Toast'
+
+import { useNavbarDispatchContext } from "./context/NavbarProvider"
+import { useShopSidebarDispatchContext } from "./context/ShopSidebarProvider"
+import { useCartDispatchContext } from "./context/CartProvider"
+import { useFavoriteDispatchContext } from "./context/FavoriteProvider"
+import Actions from "./actions/Actions"
 
 function App() {
+  const location = useLocation()
+  const navbarDispatch = useNavbarDispatchContext()
+  const shopSidebarDispatch = useShopSidebarDispatchContext()
+  const cartDispatch = useCartDispatchContext()
+  const favoriteDispatch = useFavoriteDispatchContext()
+
+  // Close NavbarMobile, Cart, Favorite when the URL change
+  useEffect(() => {
+    navbarDispatch({
+      type: Actions.HIDE,
+    })
+    cartDispatch({
+      type: Actions.HIDE,
+    })
+    favoriteDispatch({
+      type: Actions.HIDE,
+    })
+    shopSidebarDispatch({
+      type: Actions.HIDE,
+    })
+  }, [location, navbarDispatch, cartDispatch, favoriteDispatch, shopSidebarDispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <CssBaseline />
+      <Suspense fallback={<LoadingPage />}>
+        <div className="App">
+          <Navbar />
+          <Routes />
+          <Footer />
+        </div>
+        <GoUpButton />
+      </Suspense>
+      <Cart />
+      <Favorite />
+      <Toast />
+    </>
+  )
 }
 
-export default App;
+export default App

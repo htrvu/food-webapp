@@ -1,0 +1,112 @@
+.home-ingredient__thumb {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .home-ingredient__side {
+    position: relative;
+
+    .home-ingredient__card__wrapper {
+      &:hover .home-ingredient__card {
+        background-color: $primary-color;
+        transform: translateY(-10px);
+        p {
+          color: #fff;
+        }
+      }
+    }
+
+    .home-ingredient__card {
+      background-color: #fff;
+      padding: 40px 24px;
+      position: relative;
+      border-radius: 8px;
+      max-width: 380px;
+      min-height: 180px;
+      margin: 52px 0;
+      transition: all 0.2s ease;
+
+      .ingredient__card__heading {
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+        color: $text-primary-color;
+      }
+
+      .ingredient__card__content {
+        font-size: 1.6rem;
+        color: $text-secondary-color;
+      }
+
+      .ingredient__card__number {
+        font-size: 2.2rem;
+        padding: 1.8rem;
+        line-height: 1.2;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: -32px;
+        left: 20px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .ingredient__card__silk {
+      width: 12rem;
+      height: 75%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:first-child {
+      .home-ingredient__card__wrapper:nth-child(even) {
+        transform: translateX(60px);
+      }
+      .ingredient__card__silk {
+        right: -40%;
+      }
+    }
+
+    &:last-child {
+      .home-ingredient__card__wrapper:nth-child(even) {
+        transform: translateX(-60px);
+      }
+      .ingredient__card__silk {
+        left: -48%;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 850px) {
+  .home-ingredient__thumb {
+    flex-direction: column;
+
+    .home-ingredient__side {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .home-ingredient__side:last-child {
+      margin-top: -52px;
+    }
+  }
+}
+
+@include lg_down {
+  .ingredient__card__silk {
+    display: none !important;
+  }
+}
+
+@include md_down {
+  .home-ingredient__card__wrapper {
+    transform: translateX(0) !important;
+  }
+}

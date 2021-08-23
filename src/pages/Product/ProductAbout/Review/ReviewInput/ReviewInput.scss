@@ -1,0 +1,59 @@
+.review__input {
+  display: flex;
+  margin-top: 80px;
+
+  .review__input-content {
+    margin-left: 20px;
+    flex-basis: 70%;
+
+    .review__input-rate {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1px;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: $text-primary-color;
+      }
+    }
+
+    .review__input-comment {
+      font-family: inherit;
+      padding: 14px;
+      width: 100%;
+      height: 10rem;
+      outline: 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+      resize: none;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+}
+
+// Responsive
+@include sm_down {
+  .review__input {
+    .review__input-content {
+      margin-left: 16px;
+      
+      .review__input-rate {
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}

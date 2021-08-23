@@ -1,0 +1,9 @@
+.rate-star__wrapper {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  
+  .rate-star {
+    color: $secondary-color;
+  }
+}

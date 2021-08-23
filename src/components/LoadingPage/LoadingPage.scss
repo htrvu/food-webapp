@@ -1,0 +1,14 @@
+.loading-page {
+  font-size: 3.2rem;
+  font-weight: bold;
+  width: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+}
+
+@include sm_down {
+  .loading-page {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,226 @@
+#home-analysis {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 80rem;
+  display: flex;
+  flex-direction: column;
+
+  .home-analysis__video__wrapper {
+    display: flex;
+    flex-grow: 1;
+
+    justify-content: center;
+    align-items: center;
+
+    .home-analysis__video-tag__wrapper {
+      position: relative;
+
+      &:hover {
+        .home-analysis__video-tag {
+          background-color: $primary-color;
+        }
+
+        p {
+          color: #fff;
+        }
+
+        .home-analysis__video-btn__wrapper {
+          .home-analysis__video-btn {
+            background-color: $secondary-color;
+          }
+
+          &::after {
+            border-color: $secondary-color;
+          }
+        }
+
+        .ball {
+          background-color: $primary-color;
+        }
+
+        .ball--1 {
+          bottom: -20%;
+          left: -15%;
+        }
+
+        .ball--2 {
+          top: -15%;
+          left: -12%;
+        }
+
+        .ball--3 {
+          right: -25%;
+          top: -5%;
+        }
+      }
+    }
+
+    .home-analysis__video-tag {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 17.5rem;
+      min-height: 17.5rem;
+      text-align: center;
+      background-color: #fff;
+      transition: background-color 0.25s ease;
+      z-index: 1;
+
+      p {
+        transition: color 0.25s ease;
+      }
+
+      .home-analysis__product {
+        color: $text-secondary-color;
+        font-size: 2.5rem;
+      }
+
+      .home-analysis__price {
+        font-size: 5rem;
+        color: $text-primary-color;
+        font-weight: bold;
+      }
+    }
+
+    .home-analysis__video-btn__wrapper {
+      position: absolute;
+      bottom: 3px;
+      right: 14px;
+      z-index: 2;
+
+      .home-analysis__video-btn {
+        background-color: $primary-color;
+        z-index: 1;
+
+        .home-analysis__video-icon {
+          color: #fff;
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        animation: ripple 0.7s ease-in-out infinite;
+      }
+    }
+
+    .ball {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(255, 81, 78, 0.2);
+      transition: all 0.3s ease-out 0.05s;
+    }
+
+    .ball--1 {
+      width: 5rem;
+      height: 5rem;
+      bottom: 10%;
+      left: 10%;
+    }
+
+    .ball--2 {
+      width: 7rem;
+      height: 7rem;
+      top: 10%;
+      left: 10%;
+    }
+
+    .ball--3 {
+      width: 10rem;
+      height: 10rem;
+      top: 15%;
+      right: 15%;
+    }
+
+    .home-analysis__overlay {
+      z-index: 1000;
+
+      .home-analysis__video {
+        width: 700px;
+        max-width: calc(100% - 32px);
+        height: 500px;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .home-analysis__content__wrapper {
+    padding: 80px 0;
+    background-color: $primary-color;
+
+    .home-analysis__content {
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+
+      .home-analysis__number {
+        font-size: 5rem;
+        font-weight: bold;
+
+        span {
+          font-size: 5rem;
+        }
+      }
+
+      .home-analysis__product {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+// Responsive
+@include md_down {
+  .home-analysis__content__wrapper {
+    padding: 12px 0 !important;
+  }
+}
+
+@include sm_down {
+  .home-analysis__content {
+    .home-analysis__number {
+      font-size: 3.2rem !important;
+      font-weight: bold;
+
+      span {
+        font-size: 3.2rem !important;
+      }
+    }
+
+    .home-analysis__product {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  .home-analysis__video {
+    height: 350px !important;
+  }
+}

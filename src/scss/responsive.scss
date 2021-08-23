@@ -1,0 +1,61 @@
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$xs: 0;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+@mixin sm {
+  @media (max-width: #{$sm - 0.05px}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$sm}) and (max-width: #{$md - 0.05px}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$md}) and (max-width: #{$lg - 0.05px}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin sm_down {
+  @media (max-width: #{$sm - 0.05px}) {
+    @content;
+  }
+}
+
+@mixin sm_up {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md_down {
+  @media (max-width: #{$md - 0.05px}) {
+    @content;
+  }
+}
+
+@mixin md_up {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg_down {
+  @media (max-width: #{$lg - 0.05px}) {
+    @content;
+  }
+}

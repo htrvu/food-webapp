@@ -1,0 +1,53 @@
+.product-about__wrapper {
+  margin: 110px 0;
+  padding: 0 50px;
+
+  .product-about__buttons {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $text-primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+
+    .product-about__btn {
+      padding: 12px 16px;
+      cursor: pointer;
+      margin: 0 8px;
+      transition: color 0.3s ease-in-out;
+
+      &.current {
+        color: #fff;
+      }
+    }
+
+    .product-about__swipe-btn {
+      position: absolute;
+      top: 0;
+      content: "";
+      height: 100%;
+      border-radius: 10px;
+      z-index: -1;
+      transition: all 0.3s ease-in-out;
+      background-color: $primary-color;
+    }
+  }
+}
+
+@include sm_down {
+  .product-about__wrapper {
+    padding: 0 8px;
+
+    .product-about__buttons {
+      font-size: 1.8rem;
+    }
+  }
+
+}
+
+@import "./Description/Description.scss";
+@import './Review/Review.scss';
+
+

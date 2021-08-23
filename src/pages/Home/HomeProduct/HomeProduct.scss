@@ -1,0 +1,119 @@
+#home-product {
+  .home-section__heading__wrapper .highlight {
+      color: $primary-color;
+  }
+
+  .home-product__slider {
+    margin-top: 50px;
+
+    .slick-list {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .slick-dots {
+      bottom: -24px;
+
+      li {
+        box-shadow: 2.5px 3px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .home-product__card {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    transition: all 0.25s ease;
+
+    .home-product__card-thumb {
+      position: relative;
+      background-color: $primary-color-light;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 50% 35%;
+      border-bottom-right-radius: 50% 35%;
+      padding: 16px 0 32px;
+
+      img {
+        margin: auto;
+        width: 80%;
+      }
+
+      .product-cart-btn {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding: 8px 16px;
+        transform: translateX(-50%) translateY(50%);
+        transition: color 0.25s ease;
+        overflow: hidden;
+
+        span {
+          z-index: 1;
+        }
+      }
+
+      .product-cart-btn::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-radius: 210px;
+        background-color: #fff;
+        will-change: width;
+        transition: width 0.25s ease;
+      }
+    }
+
+    .home-product__card-content {
+      margin-top: 24px;
+      padding: 0 10px;
+
+      .home-product__card-title {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: $text-primary-color;
+        padding: 10px 0;
+      }
+
+      .home-product__card-desc {
+        color: $text-secondary-color;
+        font-size: 1.5rem;
+      }
+
+      .home-product__card-price {
+        color: $secondary-color;
+        font-size: 1.8rem;
+        padding: 10px 0 24px;
+        font-weight: bold;
+        transition: color 0.25s ease;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 81, 78, 0.25);
+
+      .home-product__card-thumb {
+        background-color: $primary-color;
+      }
+
+      .home-product__card-price {
+        color: $primary-color;
+      }
+
+      .product-cart-btn {
+        color: $primary-color;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

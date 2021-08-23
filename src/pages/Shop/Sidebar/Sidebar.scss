@@ -1,0 +1,123 @@
+.shop__sidebar-part {
+  color: $text-primary-color;
+
+  .sidebar-part__heading {
+    font-size: 2rem;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar-part__list {
+    padding: 8px 0;
+
+    .sidebar-part__item {
+      width: 100%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      border-radius: 10px;
+
+      &.active {
+        color: $primary-color;
+        font-weight: bold;
+      }
+      
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .sidebar-part__icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-right: 12px;
+      }
+
+      .sidebar-part__content {
+        font-size: 1.6rem;
+
+        &.active {
+          color: $primary-color;
+          font-weight: bold;
+        }
+      }
+
+      .price-radio__group {
+        flex-grow: 1;
+        margin-right: 0;
+
+        .PrivateSwitchBase-root-1 {
+          padding: 2px 8px;
+        }
+
+        .MuiFormControlLabel-label {
+          flex-grow: 1;
+        }
+
+        .price-radio__icon {
+          svg {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shop__sidebar-mobile__wrapper {
+  display: none;
+  margin-left: 12px;
+
+  .sidebar-mobile__heading {
+    display: flex;
+    align-items: center;
+    color: $text-primary-color;
+    cursor: pointer;
+
+    > svg {
+      font-size: 2.4rem;
+      margin-right: 4px;
+    }
+    > span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .sidebar-mobile__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: #fff;
+
+    .shop__sidebar {
+      padding: 16px;
+    }
+
+    .sidebar-mobile__close-btn {
+      position: absolute;
+      top: 26px;
+      right: 16px;
+      padding: 2px;
+      font-size: 2.8rem;
+      cursor: pointer;
+    }
+  }
+}
+
+// Responsive
+@include md_down {  
+  .shop__sidebar__wrapper {
+    display: none;
+  }  
+
+  .shop__sidebar-mobile__wrapper {
+    display: block;
+  }
+}
+

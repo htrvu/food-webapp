@@ -1,0 +1,115 @@
+.product-about__desc {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.product-about__table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.28571%, 1fr));
+  margin-top: 40px;
+  color: $text-primary-color;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 64%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #ccc;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2%;
+    left: 15%;
+    display: block;
+    height: 110%;
+    width: 0.1rem;
+    background-color: #ccc;
+  }
+}
+
+.main-col {
+  font-size: 2rem !important;
+  font-weight: bold !important ;
+}
+
+.product-about__nutri {
+  margin-bottom: 40px;
+
+  &-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+
+    &.main-col {
+      margin-top: 20px;
+    }
+  }
+
+  &-desc {
+    font-size: 1.4rem;
+  }
+}
+
+.product-about__ingredient {
+  font-size: 1.5rem;
+
+  &.main-col {
+    margin-top: 46px;
+  }
+}
+
+// Responsive
+@media (max-width: 800px) {
+  .product-about__table {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+
+    &::before {
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 0.1rem;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .main-col {
+      margin-top: 0;
+    }
+
+    .product-about__nutri {
+      margin-bottom: 0;
+    }
+
+    .product-about__column__wrapper {
+      display: flex;
+      padding: 32px 0;
+      border-top: 1px solid #ccc;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include sm_down {
+  .product-about__desc {
+    text-align: center;
+  }
+}

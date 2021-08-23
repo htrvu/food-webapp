@@ -1,0 +1,29 @@
+.product-related__wrapper {
+  .product-related__category {
+    font-family: "Pangolin";
+    color: $secondary-color;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .product-related__title {
+    color: $text-primary-color;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .product-related__list {
+    margin: 32px 0;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}
+
+// Responsive
+
+@include sm_down {
+  .product-related__title {
+    font-size: 2.4rem !important;
+  }
+}

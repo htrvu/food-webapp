@@ -1,0 +1,122 @@
+.checkout__form {
+  .form__heading {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+  }
+
+  .form__row {
+    display: flex;
+  }
+
+  .form__input {
+    margin-bottom: 16px;
+    flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    &:nth-child(n+2) {
+      margin-left: 16px;
+    }
+
+    .MuiInputLabel-outlined {
+      color: rgba(0, 0, 0, 0.54)  ;
+      transform: translate(12px, 17px) scale(1);
+      font-size: 1.3rem;
+
+      &.MuiInputLabel-shrink {
+        transform: translate(12px, -4px) scale(0.8);
+      }
+
+      &.Mui-error {
+        color: $primary-color;
+      }
+    }
+
+    .form__label--select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      font-size: 1.3rem;
+      color: rgba(0, 0, 0, 0.54)  ;
+      transform: translate(8px, 14px) scale(1);
+      background-color: #fafafa;
+      border: none;
+      padding: 0 4px;
+      pointer-events: none;
+      transition: transform .2s;
+
+      &.error {
+        color: $primary-color;
+      }
+
+      &.focus {
+        transform: translate(4px, -9px) scale(0.8);
+      }
+    }
+
+    .MuiOutlinedInput-root {
+      input {
+        padding: 14px 10px;
+        font-size: 1.5rem;
+        color: $text-primary-color;
+      }
+
+      fieldset {
+        border-color: rgba(0, 0, 0, 0.23) ;
+        border-width: 1px;
+
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      &.Mui-error .MuiOutlinedInput-notchedOutline {
+        border-color: $primary-color;
+      }
+    }
+
+    .MuiFormHelperText-root, .form__error {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin: 8px 8px 0 8px;  
+      color: $primary-color;
+    }
+  }
+}
+
+.checkout__confirm {
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+
+  .checkout__return {
+    display: flex;
+    align-items: center;
+    transition: color .2s ease;
+
+    > svg {
+      font-size: 1.4rem;
+    }
+
+    & * {  
+      color: $primary-color;
+      font-weight: bold;
+
+      &:hover  {
+        color: $primary-color-light;
+      }
+    }
+  }
+
+  .checkout__btn {
+    padding: 6px 24px;
+    
+    .MuiButton-label {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.home-ingredient__content {
+  margin: 20px 0;
+
+  .home-section__heading {
+    .highlight {
+      color: $primary-color;
+    }
+
+    .price {
+      font-size: 3.6rem !important;
+    }
+
+    .home-ingredient__order-btn {
+      margin-top: 16px;
+    }
+  }
+}

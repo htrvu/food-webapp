@@ -1,0 +1,33 @@
+.checkout-summary {
+  .bg-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  .bg-icon__1 {
+    width: 12rem;
+    top: 24px;
+    left: 32px;
+  }
+
+  .bg-icon__2 {
+    top: 25%;
+    left: 50%;
+    width: 25rem;
+  }
+
+  .bg-icon__3 {
+    top: 60%;
+    left: 12px;
+    width: 15rem;
+  }
+
+  .bg-icon__4 {
+    top: 82%;
+    left: 55%;
+    width: 16rem;
+  }
+}

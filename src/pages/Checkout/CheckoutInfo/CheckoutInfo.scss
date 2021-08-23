@@ -1,0 +1,129 @@
+.checkout-info {
+  margin-right: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkout__step__wrapper {
+  display: flex;
+  margin-bottom: 50px;
+
+  .checkout__step {
+    text-align: center;
+
+    &.complete .checkout__step__icon {
+      background-color: $primary-color;
+    }
+
+    &__icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 4px;
+      padding: 16px;
+      background-color: #bfbfbf;
+      transition: background-color 0.2s ease 0.5s;
+      color: #fff;
+
+      > svg {
+        font-size: 2.6rem;
+      }
+    }
+
+    &__label {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+
+  .checkout__step__connector {
+    flex: 1;
+    height: 4px;
+    position: relative;
+    margin: 28px -20px 0 -20px;
+    background-color: #bfbfbf;
+    z-index: -1;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 0;
+      transition: all 0.75s ease;
+      background-color: $primary-color !important;
+    }
+
+    &.complete::before {
+      width: 100%;
+    }
+  }
+}
+
+.checkout__contact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  .contact__heading {
+    font-size: 2.8rem;
+  }
+
+  .contact__account {
+    display: flex;
+    align-items: center;
+    margin: 16px 0 10px;
+
+    &__avatar {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 8px;
+      color: $text-primary-color;
+      font-weight: bold;
+    }
+
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    &__logout {
+      font-size: 1.4rem;
+      color: $primary-color-light;
+      cursor: pointer;
+    }
+
+    &__checkbox {
+      margin-left: 1px;
+
+      > span {
+        padding: 4px;
+        svg {
+          font-size: 2rem;
+        }
+      }
+
+      .MuiFormControlLabel-label {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@include md_down {
+  .checkout-info {
+    margin-right: 0;
+  }
+}
+
+@import "./CheckoutForm/CheckoutForm.scss";

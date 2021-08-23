@@ -1,0 +1,101 @@
+@import "./HomeSlider/HomeSlider";
+@import "./HomeWorking/HomeWorking";
+@import "./HomeIngredient/HomeIngredient";
+@import "./HomeCategory/HomeCategory";
+@import "./HomeDelivery/HomeDelivery";
+@import "./HomeProduct/HomeProduct";
+@import "./HomeAnalysis/HomeAnalysis";
+@import "./HomeReview/HomeReview";
+
+.home {
+  .slick-dots {
+    li {
+      margin: 0 8px;
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid $secondary-color;
+      box-shadow: 2.5px 3px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      position: relative;
+      opacity: 0.3;
+      transition: opacity 0.2s ease;
+
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 0.5px);
+        height: calc(100% - 0.5px);
+        background-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: background-color 0.2s ease;
+      }
+      button {
+        opacity: 0;
+        
+      }
+    }
+
+    li.slick-active{
+      opacity: 1;
+
+      &::before {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .bg-icon {
+    z-index: -1;
+    position: absolute;
+    will-change: transform;
+  }
+}
+
+.home-section {
+  margin: 100px 0;
+
+  @include md_down {
+    margin: 80px 0;
+  }
+}
+
+.home-section__heading__wrapper {
+  .home-section__sub-heading {
+    font-family: Pangolin;
+    color: $secondary-color;
+    font-size: 2rem;
+  }
+
+  .home-section__heading {
+    color: $text-primary-color;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-top: 4px;
+
+    .highlight {
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.btn--primary {
+  background-color: $primary-color;
+  border-radius: 210px;
+  color: #fff;
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
+
+.rounded-tag {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}

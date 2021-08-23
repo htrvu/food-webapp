@@ -1,0 +1,48 @@
+.review__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.review__item {
+  display: flex;
+
+  &:nth-child(n+2) {
+    margin-top: 40px;
+  }
+
+  .review__item-content {
+    margin-left: 16px;
+
+    .review__info {
+      margin-bottom: 6px;
+      font-weight: bold;
+
+      .review__name {
+        font-size: 1.4rem;
+        margin-right: 12px;
+        color: $text-primary-color;
+      }
+
+      .review__time {
+        font-size: 1.3rem;
+        font-style: italic;
+        color: $text-secondary-color;
+      }
+    }
+
+    .review__rate {
+      margin-bottom: 10px;
+      
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    .review__comment {
+      font-size: 1.4rem;
+      color: $text-primary-color; 
+    }
+  }
+}

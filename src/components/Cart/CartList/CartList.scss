@@ -1,0 +1,48 @@
+.empty-card__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-20px);
+
+  .empty-card__image {
+    width: 23.5rem;
+    margin-bottom: 16px;
+  }
+
+  .empty-card__text {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.cart-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+@include sm_down {
+  .empty-card__wrapper {
+    .empty-card__image {
+      width: 18rem;
+    }
+
+    .empty-card__text {
+      font-size: 1.8rem;
+    }
+  }
+
+  .cart-list {
+    padding: 16px 8px;
+  }
+}
+
+@import './CartItem/CartItem.scss';

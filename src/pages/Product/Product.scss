@@ -1,0 +1,15 @@
+@import './ProductDetail/ProductDetail.scss';
+@import './ProductAbout/ProductAbout.scss';
+@import './ProductRelated/ProductRelated.scss';
+
+.product__wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+@include sm_down {
+  .product__wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}

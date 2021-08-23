@@ -1,0 +1,22 @@
+.page__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32.5rem;
+  background-size: cover;
+  color: #fff;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+
+  p {
+    text-align: center;
+  }
+}
+
+@include sm_down {
+  .page__banner {
+    height: 28rem;
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import './Sidebar/Sidebar.scss';
+@import './ShopContent/ShopContent.scss';
+
+.shop__wrapper {
+  margin: 80px 0;
+}
+
+@include sm_down {
+  .shop__wrapper {
+    margin: 60px 0;
+  } 
+}

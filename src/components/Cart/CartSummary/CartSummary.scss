@@ -1,0 +1,111 @@
+.cart__summary__wrapper {
+  padding: 20px;
+  padding-top: 28px;
+  margin-top: auto;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+
+  .summary__more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+
+    .summary__more-btn {
+      display: block;
+      margin: auto;
+      width: 100px;
+      height: 6px;
+      border-radius: 999px;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .summary__detail {
+    padding: 0 16px;
+    color: $text-primary-color;
+    overflow: hidden;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    .summary__list {
+      padding: 8px 0;
+    }
+
+    .summary__item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      color: $text-secondary-color;
+      margin-bottom: 16px;
+
+      span:last-child {
+        font-weight: bold;
+        color: $text-primary-color;
+      }
+    }
+  }
+
+  .summary__total {
+    font-weight: bold;
+    color: $text-primary-color;
+    font-size: 1.8rem;
+    display: flex;
+    padding: 0 16px 8px;
+
+    .summary__price {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-left: auto;
+    }
+  }
+
+  .summary__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .summary__btn {
+    font-size: 1.3rem;
+    color: $text-primary-color;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+    width: 190px;
+    padding: 8px 16px;
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+
+  .summary__btn--checkout {
+    color: #fff;
+    background-color: $primary-color;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+}
+
+// Responsive
+@include sm_down {
+  .cart__summary__wrapper {
+    .summary__total {
+      padding: 0 12px 6px;
+    }
+
+    .summary__btn {
+      font-size: 1.2rem;
+    }
+  }
+}

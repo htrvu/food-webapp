@@ -1,0 +1,199 @@
+.product-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .product-card__thumb {
+      .product-card__image {
+        filter: brightness(0.8);
+      }
+    }
+    .product-card__option {
+      opacity: 1;
+      right: 12px;
+    }
+  }
+
+  .product-card__thumb {
+    height: 16.5rem;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+    > span {
+      height: 100%;
+      width: 100%;
+    }
+
+    .lazy-load-image-background.blur.lazy-load-image-loaded > img {
+      transition: all 0.3s;
+    }
+
+    .product-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform-origin: 50% 50%;
+    }
+
+    .product-card__rate {
+      position: absolute;
+      bottom: 0;
+      left: 4px;
+      color: #fff;
+
+      svg {
+        font-size: 2.4rem;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+        margin-right: 2px;
+      }
+
+      span {
+        font-size: 3.2rem;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  
+  .product-card__trend {
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: $primary-color;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border-top: 4px solid $primary-color-dark;
+      border-left: 4px solid transparent;
+    }
+  }
+
+  .product-card__option {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 1;
+
+    > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      transition: color 0.1s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    svg {
+      font-size: 1.8rem;
+    }
+  }
+
+  .product-card__info {
+    flex: 1;
+    color: $text-primary-color;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+
+    .product-card__name {
+      font-size: 1.7rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .product-card__desc {
+      font-size: 1.4rem;
+      flex: 1;
+      margin: 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .product-card__footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.4rem;
+
+      .product-card__address {
+        display: flex;
+        align-items: center;
+        
+        > span {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          word-break: break-word;
+        }
+
+        svg {
+          color: $primary-color;
+          font-size: 1.8rem;
+          margin-right: 2px;
+        }
+      }
+
+      .product-card__price {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+// Responsive
+@include md_down {
+  .product-card__option {
+    opacity: 1 !important;
+    right: 8px !important;
+  }
+}
+
+@include sm_down {
+  .product-card__desc {
+    font-size: 1.3rem !important;
+  }
+}

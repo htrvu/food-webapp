@@ -1,0 +1,24 @@
+@import './ShopManipulate/ShopManipulate.scss';
+@import './ShopProduct/ShopProduct.scss';
+@import './ShopPagination/ShopPagination.scss';
+
+#shop-content {
+  margin-left: 24px;
+  
+  .loading-spinner {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@include md_down {
+  #shop-content {
+    margin-left: 0;
+  }
+}
+
+

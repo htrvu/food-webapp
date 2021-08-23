@@ -1,0 +1,46 @@
+.not-found__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  color: $text-primary-color;
+  
+  h1 {
+    font-size: 5rem;  
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  img {
+    margin: 32px 0;
+    width: 500px;
+    max-width: calc(100% - 64px);
+  }
+
+  button {
+    padding: 6px 12px;
+  }
+}
+
+@include sm_down {
+  .not-found__banner {
+    p {
+      font-size: 4rem;
+    }
+  }
+
+  .not-found__content {
+    padding: 48px;
+
+    h1 {
+      font-size: 4rem;  
+    }
+  
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}
