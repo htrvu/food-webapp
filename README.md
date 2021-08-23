@@ -17,6 +17,7 @@
   - React-image-magnifiers
   - React-content-loader
   - React-select
+  - React-intersection-observer
 
 #### **⚙ Install**
 
