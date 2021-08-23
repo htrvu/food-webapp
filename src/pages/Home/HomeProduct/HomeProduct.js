@@ -30,7 +30,7 @@ const HomeProduct = () => {
         <div className="home-section__heading__wrapper">
           <motion.p variants={rightInVariants} className="home-section__sub-heading">Quality Products</motion.p>
           <motion.p variants={leftInVariants} className="home-section__heading">
-            Burger as expected <span className="highlight">dilicious</span> one
+            Burger as expected <span className="highlight">delicious</span> one
           </motion.p>
         </div>
 

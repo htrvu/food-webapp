@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext, useLayoutEffect } from "react"
 
 const SizeContext = React.createContext()
 export const useSizeContext = () => {
@@ -8,7 +8,7 @@ export const useSizeContext = () => {
 const SizeProvider = ({ children }) => {
   const [phoneSize, setPhoneSize] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const checkSize = () => {
       if (window.innerWidth < 600) {
         setPhoneSize(true)

@@ -23,7 +23,9 @@ import { useToastDispatchContext } from "../../../../context/ToastProvider"
 import Actions from "../../../../actions/Actions"
 
 import { DiscountData } from "../../../../data/Product/DiscountData"
+
 import { calculatePrice } from "../../../../utils/CalculatePrice"
+import  formatCategory from "../../../../utils/FormatCategory"
 
 const ProductInfo = ({ product, category }) => {
   const [total, setTotal] = useState(0)
@@ -117,7 +119,7 @@ const ProductInfo = ({ product, category }) => {
       <div className="product-detail__mores">
         <p className="product-detail__more">
           <span>Category: </span>
-          {category}
+          {formatCategory(category)}
         </p>
         <p className="product-detail__more">
           <span>Country: </span> {product && product.country}

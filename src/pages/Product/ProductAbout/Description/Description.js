@@ -1,13 +1,8 @@
 import React from "react"
 import { DescriptionTable } from "../../../../data/Product/DescriptionTable"
+import formatCategory from '../../../../utils/FormatCategory'
 
 const Description = ({category}) => {
-  const formatCategory = category.split("-").reduce((res, word, index) => {
-    if (index) res += " "
-    res = res + word[0].toUpperCase() + word.slice(1)
-    return res
-  }, "")
-  
   return (
     <>
       <p className="product-about__desc">
@@ -24,7 +19,7 @@ const Description = ({category}) => {
               <div
                 className={`product-about__nutri-title ${index === 0 ? "main-col" : ""}`}
               >
-                {column.title || formatCategory}
+                {column.title || formatCategory(category)}
               </div>
               <div className="product-about__nutri-desc">{column.description}</div>
             </div>

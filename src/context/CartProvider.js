@@ -1,6 +1,7 @@
 import React, { useReducer, useContext } from "react"
 import Actions from '../actions/Actions'
-import { calculatePrice, round2 } from "../utils/CalculatePrice"
+import { calculatePrice } from "../utils/CalculatePrice"
+import { round2 } from '../utils/Math'
 
 const reducer = (state, action) => {
   const { showCart, totalQuantity, totalPriceReal, totalPriceFinal } = state

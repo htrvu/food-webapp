@@ -6,7 +6,7 @@ const ReviewData = [
     comment: 'I chose food G because of their value And incredible superior customer Service they really awesome Food with quality service Ha of their value And incredible sup with quality'
   },
   {
-    name: 'Rose',
+    name: 'Rosé',
     avatar: './images/Home/Review/user-review-2.jpg',
     job: 'Main vocalist of Backpink group',
     comment: 'Had dinner with girl friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!'

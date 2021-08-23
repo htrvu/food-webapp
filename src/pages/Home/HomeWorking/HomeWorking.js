@@ -12,7 +12,7 @@ import { parentVariants, leftInVariants, rightInVariants, bottomUpVariants } fro
 
 const HomeWorking = () => {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
     triggerOnce: true
   })
 

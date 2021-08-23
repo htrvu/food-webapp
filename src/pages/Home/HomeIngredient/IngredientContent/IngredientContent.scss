@@ -7,11 +7,17 @@
     }
 
     .price {
-      font-size: 3.6rem !important;
+      font-size: 3.6rem;
     }
 
     .home-ingredient__order-btn {
       margin-top: 16px;
     }
+  }
+}
+
+@include sm_down {
+  .price {
+    font-size: 3.2rem !important;
   }
 }

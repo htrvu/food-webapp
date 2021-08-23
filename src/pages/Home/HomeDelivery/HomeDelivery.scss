@@ -68,3 +68,17 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  #home-delivery {
+    .home-delivery__contact {
+      img {
+        display: none;
+      }
+
+      .home-delivery__contact-info {
+        margin-left: 0;
+      }
+    }
+  }
+}

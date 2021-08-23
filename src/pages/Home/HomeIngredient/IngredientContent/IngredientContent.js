@@ -36,7 +36,7 @@ const IngredientContent = () => {
           </motion.div>
           <div className="home-section__heading">
             <motion.div variants={rightInVariants}>
-              Super delicious <span className="highlight">Steak Hamburger</span>
+              Super delicious <span className="highlight break-line">Steak Hamburger</span>
             </motion.div>
             <motion.p variants={bottomUpVariants} className="highlight price">
               $25.00

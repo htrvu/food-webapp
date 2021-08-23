@@ -97,8 +97,10 @@
 }
 
 // Responsive
-@include sm {
-  .home-category__slider-btn {
-    display: none;
+@include sm_down {
+  .home-category__slider {
+    .slick-list {
+      width: 78% !important;
+    }
   }
 }
